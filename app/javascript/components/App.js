@@ -1,6 +1,13 @@
-import React from 'react';
-import Greeting from './Greeting';
+import React from "react";
+import { BrowserRouter, Route, Routes } from "react-router-dom";
+import Greeting from "./Greeting";
 
 export default function App() {
-    return (<Greeting/>);
-  }
+  return (
+    <BrowserRouter>
+      <Routes>
+        <Route path="/" element={<Greeting />} />
+      </Routes>
+    </BrowserRouter>
+  );
+}
